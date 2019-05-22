@@ -4,13 +4,11 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|  |
-|user_name|string|null: false|
-|mail_address|text|null: false, unique: true|
-|password|string|null: false|
+|name|string|null: false|
 
 ### Association
 
+- has_many :members
 - has_many :groups, through: :members
 - has_many :messages
 
@@ -36,10 +34,11 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|group_id|integer|null: false|
-|group_name|string|null: false|
+|name|string|null: false|
 
 ### Association
+
+has_many :members
 has_many :users, through: :members
 has_many :messages
 
