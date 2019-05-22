@@ -1,6 +1,6 @@
-#テーブル設計
+# テーブル設計
 
-##usersテーブル
+## usersテーブル
 
 |Column|Type|Options|
 |------|----|-------|
@@ -10,10 +10,12 @@
 |password|string|null: false|
 
 ### Association
+
 - has_many :groups, through: :members
 - has_many :messages
 
-###Index
+### Index
+
 - add_index :user_name
 
 
@@ -30,7 +32,7 @@
 - belongs_to :user
 
 
-##groupsテーブル
+## groupsテーブル
 
 |Column|Type|Options|
 |------|----|-------|
@@ -41,12 +43,12 @@
 has_many :users, through: :members
 has_many :messages
 
-###Index
+### Index
 
 - add_index :group_name
 
 
-##messagesテーブル
+## messagesテーブル
 
 |Column|Type|Options|
 |------|----|-------|
