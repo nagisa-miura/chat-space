@@ -9,14 +9,25 @@
   %body
     = yield
     %header
+    .notice グループを作成しました
     .wrapper
-      .chat-side
+      .chat-side-bar
         .side-header
           .side-header__box
             .side-header__box__user-name hoge
             .side-header__box__menu
               .side-header__box__menu__new-group
               .side-header__box__menu__edit-user
+        .groups
+          .group
+            %p.group__name hogehoges
+            %p.group__latest-message こんにちは
+          .group
+            %p.group__name fugafuga
+            %p.group__latest-message おはよう
+          .group
+            %p.group__name foobar
+            %p.group__latest-message hello!
       .chat-main
         .main-header
           .main-header__left-box
@@ -30,7 +41,10 @@
             .messages__box__text こんにちは
             .messages__box__post-date 2019/05/22(Wed) 17:44:56
 
-      .form
+        .form
+          .form__input-box ここに入力してください
+          .form__send-button SEND
+
 
 
     
