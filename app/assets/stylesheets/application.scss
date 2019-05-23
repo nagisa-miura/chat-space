@@ -85,6 +85,7 @@
       padding: 0 40px;
       height: 100px;
       width: 100%;
+      overflow: scroll;
 
       &__left-box {
         width: 100px;
@@ -129,20 +130,21 @@
     .messages {
       background-color: #fafafa;
       height: calc(100vh - 190px);
+      padding: 46px 40px;
+      box-sizing: border-box;
+      overflow: scroll;
 
-      .message {
-        background-color: yellow;
+      &__message-box {
         color:red;
-        width: 100%;
-        height: 65px;
+        width: 100px;
         &__user-name {
           margin: 46px 0 10px 0;
         }  //user-name
 
         &__text {
-          
+          color: blue;
         }  //text
-      }  //box
+      }  //message-box
     }  //messages
 
     .form {
@@ -160,6 +162,5 @@
 
       }  //post-date
     }  //form
-
   }  //chat-main
 }  //wrapper
