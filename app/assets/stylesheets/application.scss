@@ -83,7 +83,6 @@
       box-sizing: border-box;
       border-bottom: solid 1px #eee;
       padding: 0 40px;
-      background-color: antiquewhite;
       height: 100px;
       width: 100%;
 
@@ -126,17 +125,35 @@
         }  //edit-button
       }  //right-box
     }  //main-header
+    
+    .messages {
+      background-color: #fafafa;
+      height: calc(100vh - 190px);
 
+      .message {
+        background-color: yellow;
+        color:red;
+        width: 100%;
+        height: 65px;
+        &__user-name {
+          margin: 46px 0 10px 0;
+        }  //user-name
+
+        &__text {
+          
+        }  //text
+      }  //box
+    }  //messages
 
     .form {
       width: 100%;
       height: 90px;
-      background-color: aquamarine;
+      background-color: #ddd;
       position: absolute;
       bottom: 0;
       
       &__input-box {
-      
+        background-color: white;
       }  //input-box
 
       &__send-button {

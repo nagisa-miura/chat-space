@@ -20,14 +20,14 @@
               .side-header__box__menu__edit-user
         .groups
           .group
-            %p.group__name hogehoges
-            %p.group__latest-message こんにちは
+            .group__name hogehoges
+            .group__latest-message こんにちは
           .group
-            %p.group__name fugafuga
-            %p.group__latest-message おはよう
+            .group__name fugafuga
+            .group__latest-message おはよう
           .group
-            %p.group__name foobar
-            %p.group__latest-message hello!
+            .group__name foobar
+            .group__latest-message hello!
       .chat-main
         .main-header
           .main-header__left-box
@@ -37,10 +37,18 @@
           .main-header__right-box
             .main-header__edit-button Edit
         .messages
-          .messages__box
-            .messages__box__user-name hoge
-            .messages__box__text こんにちは
-            .messages__box__post-date 2019/05/22(Wed) 17:44:56
+          .message
+            .message__user-name hoge
+            .message__text こんにちは
+            .message__post-date 2019/05/22(Wed) 17:44:56
+          .message
+            .message__user-name fuga
+            .message__text おやすみ
+            .message__post-date 2019/05/22(Wed) 19:56:44
+          .message
+            .message__user-name hoge
+            .message__text こんにちは
+            .message__post-date 2019/05/23(Wed) 16:03:56
 
         .form
           .form__input-box ここに入力してください
