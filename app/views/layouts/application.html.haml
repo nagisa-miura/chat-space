@@ -58,7 +58,8 @@
 
         .form-main
           %form{:action => "./hoge/hoge", :method => "post", :class => "form-box"}
-            %input{:type => "text", :placeholder => "type a message", :class => "form-main__form-box__input-box"}
-            .form-box__image-box
-              %label.fa.fa-image
-            %input{:type => "submit", :value => "SEND", :class => "form-main__form-box__send-button"}
+            .form-box__entry
+              %input{:type => "text", :placeholder => "type a message", :class => "form-box__entry__input-box"}
+              .form-box__entry__image-box
+                %label.far.fa-image.fa-2x
+            %input{:type => "submit", :value => "SEND", :class => "form-box__send-button"}
