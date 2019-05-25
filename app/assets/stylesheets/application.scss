@@ -1,9 +1,12 @@
 @import "./reset";
+@import 'font-awesome-sprockets';
+@import 'font-awesome';
 
 .notice {
+  background-color: #38AEF0;
   width: 100vw;
-  background-color: blue;
   text-align: center;
+  font-weight: lighter;
 }  //notice
 
 .wrapper {
@@ -29,15 +32,17 @@
 
       &__box {
         height: 100px;
-        display: flex;
 
         &__user-name {
           color:white;
+          float: left;
         }  //user-name
 
+
         &__menu {
-          display: flex;
-          
+          float: right;
+          text-align: right;
+
         }  //menu
       }  //box
     }  //side-header
@@ -160,20 +165,46 @@
       }  //message-box
     }  //messages
 
-    .form {
+    .form-main{
       width: 100%;
       height: 90px;
       background-color: #ddd;
       position: absolute;
       bottom: 0;
-      
-      &__input-box {
-        background-color: white;
-      }  //input-box
+      padding: 20px 40px;
+      box-sizing: border-box;
+      margin-right: auto;
 
-      &__send-button {
+      &__form-box{
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+        
+        &__input-box {
+          background-color: white;
+          height: 50px;
+          box-sizing: border-box;
+          float: left;
+          width : calc(100% - 115px);
+          margin-right: 15px;
+          padding: 0 10px;
+        }  //input-box
 
-      }  //post-date
-    }  //form
+        &__image-box {
+          position: absolute;
+          right: 0;
+          background-color: #253141
+        }
+
+        &__send-button {
+          width: 100px;
+          height: 50px;
+          padding: 0 30px;
+          background-color: #38aef0;
+          color:white;
+          float: right;
+        }  //post-date
+      }  //form-box
+    }  //form-main
   }  //chat-main
 }  //wrapper

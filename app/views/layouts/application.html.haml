@@ -16,7 +16,9 @@
           .side-header__box
             .side-header__box__user-name hoge
             .side-header__box__menu
-              .side-header__box__menu__new-group
+              .side-header__box__menu__new-group 
+                %i.fa.fa-edit
+                %i.fa.fa-cog
               .side-header__box__menu__edit-user
         .groups
           .group
@@ -28,6 +30,7 @@
           .group
             .group__name foobar
             .group__latest-message hello!
+            
       .chat-main
         .main-header
           .main-header__left-box
@@ -52,8 +55,10 @@
               .messages__message-box__upper-info__user-name hoge
               .messages__message-box__upper-info__post-date 2019/05/22(Wed) 17:44:56
             .messages__message-box__text こんにちは
-          
 
-        .form
-          .form__input-box 
-          .form__send-button SEND
+        .form-main
+          %form{:action => "./hoge/hoge", :method => "post", :class => "form-box"}
+            %input{:type => "text", :placeholder => "type a message", :class => "form-main__form-box__input-box"}
+            .form-box__image-box
+              %label.fa.fa-image
+            %input{:type => "submit", :value => "SEND", :class => "form-main__form-box__send-button"}
