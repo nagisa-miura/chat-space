@@ -10,56 +10,50 @@
     = yield
     %header
     .notice グループを作成しました
-    .wrapper
-      .chat-side-bar
-        .side-header
-          .side-header__box
-            .side-header__box__user-name hoge
-            .side-header__box__menu
-              .side-header__box__menu__new-group 
+  
+    .chat-side-bar
+      .side-header
+        .side-header__box
+          .side-header__box__user-name hoge
+          .side-header__box__menu
+            .side-header__box__menu__new-group
+              %a{:href => "#"}
                 %i.fa.fa-edit
+              %a{:href => "#"}
                 %i.fa.fa-cog
-              .side-header__box__menu__edit-user
-        .groups
-          .group
-            .group__name hogehoges
-            .group__latest-message こんにちは
-          .group
-            .group__name fugafuga
-            .group__latest-message おはよう
-          .group
-            .group__name foobar
-            .group__latest-message hello!
-            
-      .chat-main
-        .main-header
-          .main-header__left-box
-            .main-header__left-box__current-group hogehoges
-            .main-header__left-box__member-list 
-              .main-header__left-box__member-list__member fuga
-          .main-header__right-box
-            .main-header__edit-button Edit
-        .messages
-          .messages__message-box
-            .messages__message-box__upper-info
-              .messages__message-box__upper-info__user-name hoge
-              .messages__message-box__upper-info__post-date 2019/05/22(Wed) 17:44:56
-            .messages__message-box__text こんにちは
-          .messages__message-box
-            .messages__message-box__upper-info
-              .messages__message-box__upper-info__user-name hoge
-              .messages__message-box__upper-info__post-date 2019/05/22(Wed) 17:44:56
-            .messages__message-box__text こんにちは
-          .messages__message-box
-            .messages__message-box__upper-info
-              .messages__message-box__upper-info__user-name hoge
-              .messages__message-box__upper-info__post-date 2019/05/22(Wed) 17:44:56
-            .messages__message-box__text こんにちは
-
-        .form-main
-          %form{:action => "./hoge/hoge", :method => "post", :class => "form-box"}
-            .form-box__entry
-              %input{:type => "text", :placeholder => "type a message", :class => "form-box__entry__input-box"}
-              .form-box__entry__image-box
-                %label.far.fa-image.fa-2x
-            %input{:type => "submit", :value => "SEND", :class => "form-box__send-button"}
+            .side-header__box__menu__edit-user
+      .groups
+        .group
+          .group__name hogehoges
+          .group__latest-message こんにちは
+        .group
+          .group__name fugafuga
+          .group__latest-message おはよう
+        .group
+          .group__name foobar
+          .group__latest-message hello!
+          
+    .chat-main
+      .main-header
+        .main-header__left-box
+          .main-header__left-box__current-group hogehoges
+          .main-header__left-box__member-list 
+            .main-header__left-box__member-list__member fuga
+        .main-header__right-box
+          .main-header__edit-button Edit
+      .messages
+        .message-box
+          .message-box__upper-info
+            .message-box__upper-info__user-name hoge
+            .message-box__upper-info__post-date 2019/05/22(Wed) 17:44:56
+          .message-box__text こんにちは
+        
+      .form-main
+        %form.form-box{:action => "./hoge/hoge", :method => "post"}
+          .entry-box
+            %input.entry-box__input-box{:type => "text", :placeholder => "type a message"}
+            .entry-box__image-box
+              %label
+                .far.fa-image.fa-2x
+                %input{:type => "file"}
+          %input.form-box__send-button{:type => "submit", :value => "Send"}
